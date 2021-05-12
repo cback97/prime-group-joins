@@ -8,15 +8,15 @@
 
   -- 3. Which warehouses have cheetos?
   SELECT warehouse.warehouse, warehouse_product.on_hand FROM warehouse_product
-    JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
-    JOIN products ON products.id = warehouse_product.product_id
-    WHERE warehouse_product.product_id = 5;
+  JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
+  JOIN products ON products.id = warehouse_product.product_id
+  WHERE warehouse_product.product_id = 5;
   
   -- 4. Which warehouses have diet pepsi?
   SELECT warehouse.warehouse, warehouse_product.on_hand FROM warehouse_product
-	JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
-	JOIN products ON products.id = warehouse_product.product_id
-	WHERE warehouse_product.product_id = 6;
+  JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
+  JOIN products ON products.id = warehouse_product.product_id
+  WHERE warehouse_product.product_id = 6;
   
   -- 5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
   SELECT customers.first_name, customers.last_name, COUNT(orders.address_id) FROM customers
